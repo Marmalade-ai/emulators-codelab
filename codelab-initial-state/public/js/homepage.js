@@ -33,7 +33,7 @@ export async function onDocumentReady(firebaseApp) {
     auth.useEmulator("http://127.0.0.1:9099");
     db.useEmulator("127.0.0.1", 8080);
   }
-  
+
   const homePage = new HomePage(db, auth);
   mount(document.body, homePage);
 }
@@ -176,6 +176,10 @@ class HomePage {
   }
 
   addToCart(id, itemData) {
+    if (this.auth.currentUser === null) {
+      throw "Not signed in";
+    }
+    if (this.auth)
     console.log("addToCart", id, JSON.stringify(itemData));
     return this.db
       .collection("carts")
