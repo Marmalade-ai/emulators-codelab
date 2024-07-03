@@ -48,7 +48,7 @@ exports.calculateCart = functions
           itemCount
         });
 
-        console.log("Updated successfully!");
+          console.log("Cart total successfully recalculated!");
         } catch(err) {
          console.warn("update error", err);
         }

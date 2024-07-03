@@ -17,6 +17,7 @@ const path = require("path");
 const TEST_FIREBASE_PROJECT_ID = "test-firestore-rules-project";
 
 // TODO: Change this to your real Firebase Project ID
+// CF: is this the correct PROJECT_ID?
 const REAL_FIREBASE_PROJECT_ID = "marmalade-beta"; //"changeme";
 
 const firebase = require("@firebase/rules-unit-testing");
